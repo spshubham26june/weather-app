@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Pacifico", cursive;
+    box-sizing: border-box;
+}
+
+body {
+    background: darkblue;
+    padding: 20px;
+    color: antiquewhite;
+}
+
+.appHeading {
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Playwrite GB S", cursive;
+    color: white;
+    font-size: 2rem;
+}
+
+/* Card Container */
+.card {
+    width: 100%;
+    max-width: 470px;
+    background: linear-gradient(120deg, skyblue, purple);
+    color: antiquewhite;
+    margin: 30px auto;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+}
+
+/* Search Bar */
+.search {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.search input {
+    border: none;
+    outline: none;
+    background: whitesmoke;
+    color: black;
+    padding: 12px 20px;
+    height: 45px;
+    border-radius: 30px;
+    flex: 1;
+    font-size: 1rem;
+}
+.search input:hover {
+    background: rgb(226, 224, 223);
+}
+.search button {
+    border: none;
+    outline: none;
+    background: whitesmoke;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search button:hover {
+    background: rgb(226, 224, 223);
+}
+.search button img {
+    width: 20px;
+}
+
+/* Weather Display */
+.Weather img {
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+}
+.temp {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+.city_name {
+    font-size: 2.2rem;
+    margin-top: 10px;
+}
+
+/* Details Section */
+.details {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.col {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.col img {
+    width: 50px;
+    height: 50px;
+}
+.subheading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.subheading p:first-child {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Initially Hide Weather Section */
+.weatherDetailsSection {
+    display: none;
+}
+
+/* ========== Media Queries (Responsive) ========== */
+
+/* Tablet Screens */
+@media (min-width: 600px) {
+    .details {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+/* Desktop Screens */
+@media (min-width: 992px) {
+    .card {
+        padding: 40px;
+    }
+
+    .appHeading {
+        font-size: 3rem;
+    }
+
+    .temp {
+        font-size: 2.5rem;
+    }
+
+    .city_name {
+        font-size: 2.8rem;
+    }
+
+    .search input {
+        font-size: 1.1rem;
+    }
+}
